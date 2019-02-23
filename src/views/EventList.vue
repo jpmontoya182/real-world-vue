@@ -1,9 +1,34 @@
 <template>
-  <h3>Event Listing</h3>
+  <div>
+    <h3>Event Listing</h3>
+    <EventCard v-for="event in events" :key="event.id" :event="event"/>
+  </div>
 </template>
 
 <script>
-export default {};
+import EventCard from "@/components/EventCard.vue";
+import EventService from "@/services/EventService.js";
+
+export default {
+  components: {
+    EventCard
+  },
+  data() {
+    return {
+      events: []
+    };
+  },
+
+  created() {
+    EventService.getEvents()
+      .then(response => {
+        this.events = response.data;
+      })
+      .catch(error => {
+        console.log(`There was an error : ${error}`);
+      });
+  }
+};
 </script>
 
 <style></style>
