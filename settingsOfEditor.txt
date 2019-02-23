@@ -1,0 +1,17 @@
+{
+  "git.ignoreMissingGitWarning": true,
+  "editor.renderWhitespace": "all",
+  "files.autoSave": "afterDelay",
+  "window.zoomLevel": -1,
+  "workbench.startupEditor": "newUntitledFile",
+  "files.autoSaveDelay": 10000,
+  "vetur.validation.template": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    { "language": "vue", "autoFix": true },
+    { "language": "html", "autoFix": true },
+    { "language": "javascript", "autoFix": true }
+  ],
+  "editor.formatOnSave": true,
+  "vetur.completion.autoImport": false
+}
